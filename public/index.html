@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gossip</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Page -->
+
+    <div id="registration" class="registration">
+        <form id="user-login" class="user-login">
+            <h3>Register</h3>
+            <div class="user-div">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter Your Username">
+            </div>
+            <div class="age-div">
+                <label for="age">Age</label>
+                <input type="date" name="age" id="age">
+            </div>
+            <div class="gender-div">
+                <label for="gender" >Gender</label>
+                <input type="radio" name="gender" class="gender" value="Male"> Male
+                <input type="radio" name="gender" class="gender" value="Female"> Female
+                <input type="radio" name="gender" class="gender" value="Trans"> Trans
+            </div>
+            <button id="join-room-btn" class="join-btn" type="submit">Join Room</button>
+        </form>
+    </div>
+
+    <!-- Gossip Container -->
+    <div id="gossip-container" class="gossip-container">
+        <div class="gossip-heading">
+            <div class="web-name">Gossip</div>
+            <div class="profile">
+                <ul>
+                    <li>Profile Info</li>
+                    <li>Chat</li>
+                    <li><a href="https://docs.google.com/forms/d/1Lu7LMQTMHI7373PZgvKYLZlb_D0rQfIce3dipPpo50Q/edit" target="_blank">Feedback</a></li>
+                    <li>Support</li>
+                </ul>
+            </div>
+        </div>
+        <div class="message-container">
+            <div class="notice-board">
+                <div class="notice-title">
+                    NOTICE
+                </div>
+                <div class="notice">
+                    <!-- <marquee class="blink" direction="left">Chat is Under Construction</marquee> -->
+                    <p class="blink">Chat is Under Construction</p>
+                </div>
+            </div>
+            <div id="chat-room" class="chat-room">
+                <!-- <div class="message sender">Hello</div>
+                <div class="message receiver">Hi!</div> -->
+            </div>
+
+            <div class="send-message">
+                <input type="text" name="send-message" class="sender-msg" id="sender-msg" placeholder="Enter Your Message">
+                <button id="send-btn" class="send-btn" type="submit">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
